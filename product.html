@@ -26,13 +26,14 @@
     <meta name="theme-color" content="#ffffff">
     <title>Product</title>
     <!-- Bootstrap core CSS-->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="/css/datepicker.css">
     <link href="/css/main.css" rel="stylesheet">
     <!-- JavaScript-->
-    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
@@ -47,7 +48,14 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <script type="text/javascript">var dataLayer = dataLayer || [];</script>
+    <script type="text/javascript">
+      var dataLayer = dataLayer || [];
+      var measure = function (digitalData) {
+        digitalData.event = digitalData.action;
+        delete digitalData.action;
+        dataLayer.push(digitalData)
+      };
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager-->
@@ -131,20 +139,131 @@
       <div class="container">
         <!-- Nav tabs-->
         <ul role="tablist" class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#benefits" aria-controls="benefits" role="tab" data-toggle="tab">Benefits</a></li>
+          <li role="presentation" class="active"><a href="#downloads" aria-controls="downloads" role="tab" data-toggle="tab">Downloads</a></li>
+          <li role="presentation"><a href="#benefits" aria-controls="benefits" role="tab" data-toggle="tab">Benefits</a></li>
           <li role="presentation"><a href="#prices" aria-controls="prices" role="tab" data-toggle="tab">Prices</a></li>
-          <li role="presentation"><a href="#downloads" aria-controls="downloads" role="tab" data-toggle="tab">Downloads</a></li>
         </ul>
         <!-- Tab panes-->
         <div class="tab-content">
-          <div id="benefits" role="tabpanel" class="tab-pane active panel panel-default">
+          <div id="downloads" role="tabpanel" class="tab-pane active panel panel-default">
+            <div class="panel-body">Downloads
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <th style="width:70%;">Description</th>
+                    <th style="width:30%;">Link</th>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file"></span> 
+                      fa-file
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-archive-o"></span> 
+                      fa-file-archive-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-audio-o"></span> 
+                      fa-file-audio-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-code-o"></span> 
+                      fa-file-code-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-excel-o"></span> 
+                      fa-file-excel-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-image-o"></span> 
+                      fa-file-image-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-movie-o"></span> 
+                      fa-file-movie-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-o"></span> 
+                      fa-file-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-pdf-o"></span> 
+                      fa-file-pdf-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-photo-o"></span> 
+                      fa-file-photo-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-picture-o"></span> 
+                      fa-file-picture-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-powerpoint-o"></span> 
+                      fa-file-powerpoint-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-text"></span> 
+                      fa-file-text
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-text-o"></span> 
+                      fa-file-text-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-video-o"></span> 
+                      fa-file-video-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-word-o"></span> 
+                      fa-file-word-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="fa fa-file-zip-o"></span> 
+                      fa-file-zip-o
+                    </td>
+                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="benefits" role="tabpanel" class="tab-pane panel panel-default">
             <div class="panel-body">Benefits</div>
           </div>
           <div id="prices" role="tabpanel" class="tab-pane panel panel-default">
             <div class="panel-body">Prices</div>
-          </div>
-          <div id="downloads" role="tabpanel" class="tab-pane panel panel-default">
-            <div class="panel-body">Downloads</div>
           </div>
         </div>
       </div>
