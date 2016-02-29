@@ -1,5 +1,6 @@
-var measure = measure || {};
-measure.errors = measure.errors || [];
+/*global measure*/
+var output = output || {};
+output.errors = output.errors || [];
 
 function checkGlobalErrors() {
   // These validate input dependent on multiple values
@@ -9,7 +10,7 @@ function checkGlobalErrors() {
   if ((numbers[0] + numbers[1] + numbers[2]) > 1) {
     return true;
   } else {
-    measure.errors.push({
+    output.errors.push({
       fieldName: 'minimum,maximum,number',
       errorType: 'numberBetweenMinAndMax',
       fieldValue: numbers.toString()
@@ -212,7 +213,7 @@ $('#form').bootstrapValidator({
     default:
       value = data.element[0].value;
     }
-    measure.errors.push({
+    output.errors.push({
       fieldName: data.field,
       errorType: data.validator,
       fieldValue: value
@@ -220,20 +221,21 @@ $('#form').bootstrapValidator({
   })
   .on('error.form.bv', function(event) {
     event.preventDefault();
+    
     checkGlobalErrors();
-    measure.status = 'fail';
-    console.log(measure.errors);
-    measure.errors = [];
+    output.event = 'validationFailed';
+    measure(output);
+    output.errors = [];
   })
   .on('success.form.bv', function(event) {
     event.preventDefault();
+    
     var OK = checkGlobalErrors();
     if (OK) {
-      measure.status = 'success';
-      console.log(measure);
+      output.event = 'formSent';
     } else {
-      measure.status = 'fail';
-      console.log(measure.errors);
-      measure.errors = [];
+      output.event = 'validationFailed';
     }
+    measure(output);
+    output.errors = [];
   });

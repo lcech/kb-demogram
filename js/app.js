@@ -18,16 +18,28 @@ var dataLayer = dataLayer || [];
   };
   // Demo itself features
   $("#loginForm").on("submit", function(event) {
+    var eventData;
+
     event.preventDefault();
 
-    measure({event: "loginFormSent", form: $(this).serializeObject()});
+    eventData = $(this).serializeObject();
+    eventData.formId = "loginForm";
+    eventData.event = "loginFormSent";
+
+    measure(eventData);
     this.reset();
   });
 
   $("#leadForm").on("submit", function(event) {
+    var eventData;
+
     event.preventDefault();
 
-    measure({event: "leadFormSent", form: $(this).serializeObject()});
+    eventData = $(this).serializeObject();
+    eventData.formId = "leadForm";
+    eventData.event = "loginFormSent";
+
+    measure(eventData);
     this.reset();
   });
 

@@ -28,17 +28,11 @@
     <!-- Bootstrap core CSS-->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!-- Font Awesome-->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <!-- Custom styles for this template-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
-    <link rel="stylesheet" href="/css/datepicker.css">
     <link href="/css/main.css" rel="stylesheet">
     <!-- JavaScript-->
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/cs.min.js"></script>
-    <script type="text/javascript" src="/js/datepicker.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
     <!-- IE Hacks--><!--[if lt IE 9]>
     <script src="docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="docs/assets/js/ie-emulation-modes-warning.js"></script>
@@ -48,32 +42,19 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- Data Layer-->
     <script type="text/javascript">
-      var dataLayer = dataLayer || [];
-      var measure = function (digitalData) {
-        digitalData.event = digitalData.action;
-        delete digitalData.action;
-        dataLayer.push(digitalData)
-      };
+      var digitalData = digitalData || {};
+      digitalData.product = "Product";
     </script>
+    <!-- Tag Manager-->
+    <script type="text/javascript" src="/js/measure.js"></script>
   </head>
   <body>
-    <!-- Google Tag Manager-->
-    <noscript>
-      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5ZWVC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-W5ZWVC');
-    </script>
-    <!-- End Google Tag Manager-->
     <div role="navigation" class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target=".demo-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span></button><a href="/" class="navbar-brand">Financial Demo</a>
+          <button type="button" data-toggle="collapse" data-target=".demo-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span></button><a href="/" class="navbar-brand">KB Demo</a>
         </div>
         <div class="navbar-collapse demo-collapse collapse">
           <ul class="nav navbar-nav">
@@ -157,110 +138,136 @@
                     <td><span class="fa fa-file"></span> 
                       fa-file
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-archive-o"></span> 
                       fa-file-archive-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-audio-o"></span> 
                       fa-file-audio-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-code-o"></span> 
                       fa-file-code-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-excel-o"></span> 
                       fa-file-excel-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-image-o"></span> 
                       fa-file-image-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-movie-o"></span> 
                       fa-file-movie-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-o"></span> 
                       fa-file-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-pdf-o"></span> 
                       fa-file-pdf-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-photo-o"></span> 
                       fa-file-photo-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-picture-o"></span> 
                       fa-file-picture-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-powerpoint-o"></span> 
                       fa-file-powerpoint-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-text"></span> 
                       fa-file-text
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-text-o"></span> 
                       fa-file-text-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-video-o"></span> 
                       fa-file-video-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-word-o"></span> 
                       fa-file-word-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                   <tr>
                     <td><span class="fa fa-file-zip-o"></span> 
                       fa-file-zip-o
                     </td>
-                    <td><a href="/files/test.pdf" class="btn btn-default">Download</a></td>
+                    <td><a href="/files/test.pdf" class="btn btn-default download">Download</a></td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
           <div id="benefits" role="tabpanel" class="tab-pane panel panel-default">
-            <div class="panel-body">Benefits</div>
+            <div class="panel-body">
+              <p>
+                The distinction between the terms <em>benefits</em> and <em>features</em> is an important concept in developing and marketing a product or service.
+                <em>Features</em> are characteristics that your product or service does or has. For example, some ovens include features such as self-cleaning, smooth stovetops, warming bins, or convection capabilities.
+                <p><em>Benefits</em> are the reasons customers buy the product or service. For example, the benefits of some ovens to buyers include safety, ease of use, affordability, or—in the case of many ovens that feature stainless steel casings—prestige.</p>
+                <p>Just like products, services differ from one another in having distinctive features and benefits, though these differences may not always be so obvious to potential customers. One building contractor may use master painters while a second uses laborers to paint. Both will tell you they do painting, but one has master painters (a feature) and produces a better-looking paint job (a definite benefit).</p>
+                <p>Every product or service has a purpose. For example, the purpose of an oven is to bake raw food, but not all ovens have the same features and benefits.</p>
+                <p>The uniqueness of a product or service can set it apart from the competition. Features can communicate the capability of a product or service. But features are only valuable if customers see those particular features as valuable. You want products or services with features which customers perceive as valuable benefits. By highlighting benefits in marketing and sales efforts, you’ll increase your sales and profits.</p>
+                <p>It’s important to remember that customers buy products and services because they want to solve a problem or meet a need. Consciously or unconsciously, your customers will always be asking the question, “What’s in it for me?” Your product and service offerings have to deliver solutions and satisfy needs, or they won’t be successful.</p>
+                <p>Given that benefits are ultimately more important to your customers than features, it is imperative that you understand the benefits your products and services provide, emphasize these benefits in your sales efforts, and update your products and services when new or additional benefits are desired by your customers.</p>
+                <p>Think about how automotive manufacturers advertise. To sell minivans, they don’t emphasize the layout of the vehicle or its carrying capacity. They show images of happy families loading their kids, sports equipment, and toys into the vehicle. They emphasize the benefits above and beyond the features.</p>
+                <p>Here are some other examples emphasizing benefits beyond the features:</p>
+                <ul>
+                  <li>A Web site shopping cart vendor who offers hosted solutions to medium-sized businesses can emphasize the convenience and time-savings of not having to maintain a Web site. It’s selling convenience, not software.</li>
+                  <li>A carpet company might be more successful if it illustrated how its carpets could help create attractively decorated interiors. Pictures of beautiful rooms could be more beneficial than a stack of carpet samples or a list of fabric features. It’s selling beauty, not carpets.</li>
+                  <li>A consulting company might focus its marketing efforts by highlighting its end product—improved performance and increased profits—not its consulting methods. It’s selling profitability, not consulting.</li>
+                  <li>A manufacturer of computer printers might emphasize less hassle or less wasted time rather than emphasizing reliability or quality. It’s selling ease-of-use, not printers, and not quality.</li>
+                  <li>A salmon fishery might emphasize the health benefits of eating salmon. It’s selling health, not fish.</li>
+                </ul>
+                <h3>When Do Features Matter the Most?</h3>
+                <p>Features always matter because they provide your customers with hints about how well your product or service will deliver its benefits. Although benefits are generally more important than features, there are some times when features make all the difference:</p>
+                <ul>
+                  <li>When all the products in a category provide the same basic benefits, a unique feature may provide a competitive advantage. For example, when all boom boxes played tapes and CDs, the one with the bass booster stood out even though the benefit to the consumer was minimal. As another example, when all leadership consultants referred to similar performance improvement outcomes, the ones who developed online diagnostic tools distinguished their work from competitors.</li>
+                  <li>When products or services can be easily compared with competitors’—as the Internet makes increasingly possible—consumers can choose products and services with the most features. Thus, even though most cell phones will provide its owner with the same general benefits for communication, a person considering which cell phone to buy may not choose a certain model if it is missing a feature not found on a competitor’s phone. For example, if one phone has Bluetooth connectivity and a second one does not, consumers may choose the one with this extra feature even if they don’t even know what Bluetooth connectivity is. It’s not that such connectivity is important, it’s just that it is so easy to compare the feature sets.</li>
+                </ul>
+              </p>
+            </div>
           </div>
           <div id="prices" role="tabpanel" class="tab-pane panel panel-default">
             <div class="panel-body">Prices</div>
@@ -310,6 +317,12 @@
     <!-- Bootstrap core JavaScript-->
     <!-- ==================================================-->
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/app.js"></script>
+    <!-- TODO: Fire Tags-->
+    <!-- Piwik Noscript Tag-->
+    <noscript>
+      <p><img src="//104.155.112.68/analytics/piwik.php?idsite=2" style="border:0;" alt=""></p>
+    </noscript>
+    <!-- End Noscript Tag-->
   </body>
 </html>
