@@ -132,7 +132,7 @@ _paq.push(["enableLinkTracking"]);
   g.type="text/javascript";
   g.async=true;
   g.defer=true;
-  g.src="//104.155.112.68/analytics/piwik.js";
+  g.src="/js/piwik.js";
   s.parentNode.insertBefore(g, s);
 })();
 
