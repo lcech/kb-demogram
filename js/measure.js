@@ -19,7 +19,7 @@ var measure = (function (measure) {
       digitalData._log.push(data);
       measureInterface._process(data);
     } else {
-      throw "Missing Action ID";
+      throw "Missing Event ID";
     }
   };
 
@@ -94,7 +94,7 @@ var measure = (function (measure) {
     console.log("Event captured. Available data:");
     console.log(JSON.stringify(digitalDataSnapshot, null, 4));
     console.log("==================================================");
-    switch (data.event) {
+    /*switch (data.event) {
     case "pageview":
       if (data.error) {
         //_paq.push(["setCustomDimension", 3, data.server]);
@@ -111,12 +111,13 @@ var measure = (function (measure) {
     case "fileDownload":
       _paq.push(["trackEvent", "File Download", "click", data.fileName]);
     break;
-    }
+    }*/
   };
   return measureInterface;
 }(measure));
 
 // Piwik Configuration
+/*
 var _paq = _paq || [];
 _paq.push(["setTrackerUrl", "//104.155.112.68/analytics/piwik.php"]);
 _paq.push(["setSiteId", 2]);
@@ -135,5 +136,6 @@ _paq.push(["enableLinkTracking"]);
   g.src="/js/piwik.js";
   s.parentNode.insertBefore(g, s);
 })();
+*/
 
 measure({event: "pageview"});
