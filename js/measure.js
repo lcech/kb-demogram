@@ -89,29 +89,33 @@ var measure = (function (measure) {
    */
   measureInterface._process = function (data) {
     var digitalDataSnapshot;
+    switch (data.event) {
+    case "pageview":
+      if (data.error) {
+        //_paq.push(["setCustomDimension", 3, data.server]);
+        //_paq.push(["setDocumentTitle",  data.error + "/URL = " +  encodeURIComponent(document.location.pathname + document.location.search) + "/From = " + encodeURIComponent(document.referrer)]);
+      }
+      $('form[data-formid]').each(function(index) {
+        digitalData.formId = $(this).data('formid');
+        digitalData.formStep = $(this).data('formstep');
+      });
+      //_paq.push(["trackPageView"]);
+      break;
+    case "leadFormSent":
+      //_paq.push(["trackEvent", "Lead Form", "submit", null, null, {dimension2: data.contact}]);
+      break;
+    case "loginFormSent":
+      //_paq.push(["trackEvent", "Login Form", "submit", null, null, {dimension1: data.username}]);
+      break;
+    case "fileDownload":
+      //_paq.push(["trackEvent", "File Download", "click", data.fileName]);
+    break;
+    }
     digitalDataSnapshot = JSON.parse(JSON.stringify(digitalData));
     delete digitalDataSnapshot._log;
     console.log("Event captured. Available data:");
     console.log(JSON.stringify(digitalDataSnapshot, null, 4));
     console.log("==================================================");
-    /*switch (data.event) {
-    case "pageview":
-      if (data.error) {
-        //_paq.push(["setCustomDimension", 3, data.server]);
-        _paq.push(["setDocumentTitle",  data.error + "/URL = " +  encodeURIComponent(document.location.pathname + document.location.search) + "/From = " + encodeURIComponent(document.referrer)]);
-      }
-      _paq.push(["trackPageView"]);
-      break;
-    case "leadFormSent":
-      _paq.push(["trackEvent", "Lead Form", "submit", null, null, {dimension2: data.contact}]);
-      break;
-    case "loginFormSent":
-      _paq.push(["trackEvent", "Login Form", "submit", null, null, {dimension1: data.username}]);
-      break;
-    case "fileDownload":
-      _paq.push(["trackEvent", "File Download", "click", data.fileName]);
-    break;
-    }*/
   };
   return measureInterface;
 }(measure));
@@ -137,5 +141,3 @@ _paq.push(["enableLinkTracking"]);
   s.parentNode.insertBefore(g, s);
 })();
 */
-
-measure({event: "pageview"});

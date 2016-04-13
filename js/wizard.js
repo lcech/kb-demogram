@@ -3,7 +3,7 @@ $(':input[data-fieldname]').change(function(event) {
   $target = $(event.target);
   measure({
     event: 'inputChange',
-    fieldName: $target.attr('name'),
+    fieldName: $target.data('fieldname'),
     fieldValue: $target.val()
   });
 });

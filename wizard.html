@@ -50,8 +50,7 @@
     <script type="text/javascript" src="/assets/js/datepicker.js"></script><!-- Data Layer -->
     <script type='text/javascript'>
     var digitalData = digitalData || {};
-    var measure = measure || function(){};
-    digitalData.formId = "Wizard";</script>
+    var measure = measure || function(){};</script>
     <!-- Tag Manager-->
     <script type="text/javascript" src="/js/measure.js"></script>
   </head>
@@ -96,7 +95,7 @@
         <div class="tab-content">
           <div id="step1" role="tabpanel" class="tab-pane active panel panel-default">
             <div class="panel-body">
-              <form id="formStep1" role="form">
+              <form id="formStep1" role="form" data-formid="Wizard" data-formstep="1">
                 <div class="panel-heading">
                   <legend class="panel-title">Step 1</legend>
                 </div>
@@ -152,6 +151,7 @@
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/js/app.js"></script>
     <!-- TODO: Fire Tags-->
+    <script type="text/javascript">measure({event: "pageview"});</script>
     <!--Piwik Noscript Tag-->
     <noscript>
       <p><img src="//104.155.112.68/analytics/piwik.php?idsite=2" style="border:0;" alt=""></p>
