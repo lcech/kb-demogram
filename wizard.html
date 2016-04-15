@@ -32,7 +32,7 @@
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="/assets/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="/assets/css/datepicker.css">
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     <!-- JavaScript-->
     <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
     <!-- IE Hacks--><!--[if lt IE 9]>
@@ -86,10 +86,12 @@
     <div class="section">
       <div class="container">
         <!-- Nav tabs-->
-        <ul role="tablist" class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#step1" aria-controls="step1" role="tab" data-toggle="tab">Step 1</a></li>
-          <li role="presentation"><a href="#step2" aria-controls="step2" role="tab" data-toggle="tab">Step 2</a></li>
-          <li role="presentation"><a href="#step3" aria-controls="step3" role="tab" data-toggle="tab">Step 3</a></li>
+        <ul id="wizardNav" role="tablist" class="nav nav-tabs">
+          <li role="presentation" class="active"><span>Step 1</span></li>
+          <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+          <li role="presentation" class="disabled"><span>Step 2</span></li>
+          <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+          <li role="presentation" class="disabled"><span>Success</span></li>
         </ul>
         <!-- Tab panes-->
         <div class="tab-content">
@@ -101,16 +103,16 @@
                 </div>
                 <div class="panel-body">
                   <div class="form-group">
-                    <label for="name" class="control-label"><b>Your Name</b></label>
-                    <input id="Name" type="text" name="name" placeholder="" data-fieldname="name" class="form-control">
+                    <label for="name" class="control-label">Your Name</label>
+                    <input id="name" type="text" name="name" placeholder="" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="email" class="control-label"><b>Your E-mail</b></label>
-                    <input id="email" type="text" name="email" placeholder="" data-fieldname="email" class="form-control">
+                    <label for="email" class="control-label">Your E-mail</label>
+                    <input id="email" type="text" name="email" placeholder="" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="topic" class="control-label"><b>Select Topic</b></label>
-                    <select name="topic" data-fieldname="topic" class="form-control">
+                    <label for="topic" class="control-label">Select Topic</label>
+                    <select name="topic" class="form-control">
                       <option>Please select topic...</option>
                       <option>General</option>
                       <option>Services</option>
@@ -118,8 +120,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="message" class="control-label"><b>Message</b></label>
-                    <textarea id="message" name="message" rows="5" data-fieldname="message" class="form-control"></textarea>
+                    <label for="message" class="control-label">Message</label>
+                    <textarea id="message" name="message" rows="5" class="form-control"></textarea>
                   </div>
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary pull-right">Continue <span class="glyphicon glyphicon-arrow-right"></span>
@@ -128,12 +130,6 @@
                 </div>
               </form>
             </div>
-          </div>
-          <div id="step2" role="tabpanel" class="tab-pane panel panel-default">
-            <div class="panel-body"></div>
-          </div>
-          <div id="step3" role="tabpanel" class="tab-pane panel panel-default">
-            <div class="panel-body"></div>
           </div>
         </div>
       </div>
