@@ -13,7 +13,6 @@ var measure = measure || function () {};
  * @param data.username {String}
  */
 measure._process = function (data) {
-  var digitalDataSnapshot;
   switch (data.event) {
   case "pageview":
     if (data.error) {
@@ -32,11 +31,6 @@ measure._process = function (data) {
     //_paq.push(["trackEvent", "File Download", "click", data.fileName]);
   break;
   }
-  digitalDataSnapshot = JSON.parse(JSON.stringify(digitalData));
-  delete digitalDataSnapshot._log;
-  console.log("Event captured. Available data:");
-  console.log(JSON.stringify(digitalDataSnapshot, null, 4));
-  console.log("==================================================");
 };
 
 // Piwik Configuration
